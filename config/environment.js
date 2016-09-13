@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyAueqNg1ePQJB4CnPRX57dEALL77GLj8IU",
+      authDomain: "ember-music.firebaseapp.com",
+      databaseURL: "https://ember-music.firebaseio.com",
+      storageBucket: "ember-music.appspot.com",
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

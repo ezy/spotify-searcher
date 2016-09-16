@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
   actions: {
     sendMessage: function()  {
 
-      let email = this.get('emailAddress');
+      let email = this.get('email');
       let message = this.get('message');
 
       const newContact = this.store.createRecord('contact', {
@@ -20,9 +20,9 @@ export default Ember.Controller.extend({
         message: message
       });
 
-      newContact.save().then((response) => {
-        this.set('responseMessage', response);
-        this.set('emailAddress', '');
+      newContact.save().then(() => {
+        this.set('responseMessage', `Thanks for contacting us. We'll be back in touch as soon as possible`);
+        this.set('email', '');
         this.set('message', '');
       });
     }

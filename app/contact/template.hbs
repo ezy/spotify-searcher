@@ -1,6 +1,13 @@
 <h1>Contact</h1>
 <br>
 <div class="form-horizontal form-group form-group-lg">
+  {{#if responseMessage}}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success">{{responseMessage}}</div>
+      </div>
+    </div>
+  {{/if}}
   <div class="row">
     <div class="col-md-12">
       {{input class="form-control" placeholder="Your email" value=email}}
@@ -19,10 +26,3 @@
     </div>
   </div>
 </div>
-{{#if responseMessage}}
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="alert alert-success">{{responseMessage}}</div>
-    </div>
-  </div>
-{{/if}}

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  email: '',
   message: '',
 
   isEmail: Ember.computed.match('email', /^.+@.+\..+$/),

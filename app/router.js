@@ -7,7 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  
   this.route('about');
   this.route('contact');
 
@@ -16,11 +15,7 @@ Router.map(function() {
     this.route('messages');
   });
 
-  this.route('artists', function() {
-    this.route('new');
-    this.route('edit', { path: '/:artist_id/edit' });
-  });
-
+  this.route('artist');
 });
 
 export default Router;

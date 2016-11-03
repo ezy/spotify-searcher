@@ -9,10 +9,6 @@
         <div class="panel-body">
           <p>Total albums: {{artist.id}}</p>
         </div>
-        <div class="panel-footer text-right">
-          {{#link-to 'artists.edit' artist.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
-          <button class="btn btn-danger btn-xs" {{action 'deleteArtist' artist}}>Delete</button>
-        </div>
       </div>
     </div>
   {{/each}}

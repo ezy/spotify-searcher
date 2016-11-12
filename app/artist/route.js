@@ -6,7 +6,6 @@ export default Ember.Route.extend({
         url: `https://api.spotify.com/v1/artists?ids=0oSGxfWSnnOXhD2fKuz2Gy,3dBVyJ7JuOMt4GE9607Qin`
     }).then(function(response) {
       return response.artists.map((data) => {
-        console.log(data);
         return data;
       });
     });

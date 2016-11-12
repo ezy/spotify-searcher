@@ -1,0 +1,15 @@
+<h2>Your artists</h2>
+<div class="row">
+  {{#each model as |artist|}}
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Artist: {{artist.name}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>Total albums: {{artist.id}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

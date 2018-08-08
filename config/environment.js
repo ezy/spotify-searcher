@@ -13,6 +13,17 @@ module.exports = function(environment) {
       }
     },
 
+    torii: {
+      // a 'session' property will be injected on routes and controllers
+      sessionServiceName: 'session',
+      providers: {
+        'spotify-oauth2': {
+          apiKey:      'facebook-app-id',
+          redirectUri: '/my-custom-landing-uri' // default is the current URL
+        }
+      }
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -22,7 +33,7 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV['ember-cli-mirage'] = {
       enabled: false
-    }
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

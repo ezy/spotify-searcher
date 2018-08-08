@@ -1,1 +1,8 @@
-{{outlet}}
+{{#if session.isWorking}}
+  One sec while we get you signed in...
+{{else}}
+  {{error}}
+  <a href="#" {{action 'signInViaSpotify'}}>
+    Sign In with Spotify
+  </a>
+{{/if}}

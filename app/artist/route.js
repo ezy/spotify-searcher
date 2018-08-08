@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
+  model: function(params) {
     return Ember.$.ajax({
-        url: `https://api.spotify.com/v1/artists?ids=0oSGxfWSnnOXhD2fKuz2Gy,3dBVyJ7JuOMt4GE9607Qin`
+        url: `https://api.spotify.com/v1/search?q=david%20bowie&type=artist`
     }).then(function(response) {
-      return response.artists.map((data) => {
+      console.log(response);
+      return response.artists.items.map((data) => {
         return data;
       });
     });
